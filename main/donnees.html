@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Données météorologiques</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+<header>
+  <div class="navbar">
+    <div class="navbar-title">Projet Climat</div>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Accueil</a></li>
+        <li><a href="./contexte.html">Contexte</a></li>
+        <li><a href="./donnees.html" class="active">Données</a></li>
+        <li><a href="./don.html">Don</a></li>
+        <li><a href="./visualisation.html">Visualisation</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <section class="intro">
+    <h1>Données météorologiques brutes</h1>
+    <p>
+      L’ensemble des séries mensuelles utilisées pour les graphiques est mis à disposition ici.
+      Chaque pays dispose de son propre fichier texte, prêt à être chargé dans l’interface de visualisation.
+    </p>
+  </section>
+
+<section class="features">
+  <div class="feature-box">
+    <h2>Contexte Berkeley Earth</h2>
+    <p>
+      Les fichiers fournis ici sont issus des séries ouvertes de Berkeley Earth (jeu « Land Only »),
+      téléchargés puis mis en cache localement pour éviter tout appel réseau.
+    </p>
+    <ul>
+      <li>Source d’origine : <a href="https://berkeleyearth.org/data/">berkeleyearth.org/data</a>.</li>
+      <li>Les entêtes et notes (lignes commençant par « % ») sont conservées dans chaque fichier pour préserver la provenance.</li>
+      <li>Les valeurs numériques restent identiques à celles publiées par Berkeley Earth ; seuls les noms de fichiers suivent le format <code>pays-TAVG-monthly.txt</code>.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="features">
+    <div class="feature-box">
+      <h2>Ce que vous trouverez</h2>
+      <ul>
+        <li> Séries mensuelles d'anomalies de températures (°C) par pays.</li>
+        <li> Mesures déjà nettoyées des lignes de commentaires (préfixées par " % ").</li>
+        <li> Fichiers prêts à être filtrés puis agrégés en moyennes annuelles dans la page Visualisation.</li>
+      </ul>
+    </div>
+
+    <div class="feature-box">
+      <h2>Format commun</h2>
+      <p>Chaque ligne numérique suit la structure ci-dessous&nbsp;:</p>
+<pre>
+Année  Mois  Anomalie(°C) Incertitude ... autres estimations
+</pre>
+<br>
+      <ul>
+        <li><strong>Colonne 1</strong> : année (format AAAA).</li>
+        <li><strong>Colonne 2</strong> : mois (1 à 12).</li>
+        <li><strong>Colonne 3</strong> : anomalie de température en Celsius (référence 1951-1980).</li>
+        <li>Les colonnes suivantes apportent des incertitudes et variantes régionales.</li>
+      </ul>
+    </div>
+  </section>
+
+<br>
+
+  <section class="feature-box">
+    <h2>Aperçu d’un fichier</h2>
+    <p>Extrait de <code>data/donnees/france-TAVG-monthly.txt</code> :</p>
+<pre>
+1750     1    -2.175  1.312    -0.354    NaN    -0.370  0.584    -0.443  0.579    -0.639  0.592
+1750     2    -1.226  1.867    -0.372  0.613    -0.377  0.580    -0.444  0.576    -0.637  0.589
+1750     3     0.399  1.303    -0.343  0.615    -0.383  0.577    -0.445  0.573    -0.636  0.586
+</pre>
+    <p>
+      Chaque fichier commence par un en-tête descriptif (lignes « % »), puis les valeurs mensuelles.
+      Vous pouvez télécharger un exemple directement :
+    </p>
+    <a class="btn" href="../data/donnees/france-TAVG-monthly.txt" download>Télécharger l’exemple</a>
+  </section>
+</main>
+<footer>
+  Projet Climat • Visualisation des températures
+</footer>
+
+</body>
+</html>

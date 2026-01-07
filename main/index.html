@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evolution Climatique</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+<header>
+  <div class="navbar">
+    <div class="navbar-title">Projet Climat</div>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Accueil</a></li>
+        <li><a href="./contexte.html">Contexte</a></li>
+        <li><a href="./donnees.html">Données</a></li>
+        <li><a href="./don.html">Don</a></li>
+        <li><a href="./visualisation.html">Visualisation</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main class="home-container">
+    <section class="hero">
+      <h1>Analyse et visualisation des tendances climatiques</h1>
+      <p>
+        Ce site présente l’évolution des températures dans le monde à partir de données météorologiques historiques. 
+        Explorez les contextes, consultez les données brutes et générez des visualisations interactives pour mieux comprendre les dynamiques climatiques.
+      </p>
+    </section>
+
+    <section class="features">
+      <div class="feature-box">
+        <h2>Contexte scientifique</h2>
+        <p>
+          Découvrez les principes climatiques, la méthodologie de collecte des données et les enjeux liés à l’évolution globale du climat.
+        </p>
+        <a class="btn" href="./contexte.html">En savoir plus</a>
+      </div>
+
+      <div class="feature-box">
+        <h2>Données météorologiques</h2>
+        <p>
+          Accédez à l’ensemble des données utilisées dans le projet : températures mensuelles, structurées par pays sur plus d’un siècle.
+        </p>
+        <a class="btn" href="./donnees.html">Voir les données</a>
+      </div>
+
+      <div class="feature-box">
+        <h2>Visualisation interactive</h2>
+        <p>
+          Sélectionnez un pays et une période pour générer un graphique interactif illustrant l’évolution annuelle des températures.
+        </p>
+        <a class="btn" href="./visualisation.html">Générer un graphique</a>
+      </div>
+    </section>
+
+<br>
+
+ <div class="feature-box">
+  <video width="100%" autoplay loop muted playsinline>
+    <source src="./../GlobalTemp.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas la vidéo.
+  </video>
+</div>
+
+</main>
+<footer>
+  Projet Climat • Visualisation des températures
+</footer>
+
+</body>
+
+</html>
